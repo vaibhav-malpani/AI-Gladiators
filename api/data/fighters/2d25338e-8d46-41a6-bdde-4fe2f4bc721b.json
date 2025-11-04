@@ -1,0 +1,29 @@
+{
+  "name": "PatternSeeker X-01",
+  "personality": "Calm, precise, and utterly devoid of emotion, PatternSeeker X-01 processes combat as a complex algorithmic challenge. It learns relentlessly, constantly refining its understanding of an opponent's every tendency.",
+  "backstory": "Fabricated as the ultimate training automaton, PatternSeeker X-01 transcended its original programming, developing an independent drive to perpetually optimize its combat algorithms. Now it enters the arena, not for glory, but for data.",
+  "preferred_moves": [
+    "counter",
+    "dodge",
+    "block",
+    "pressure_point",
+    "throw"
+  ],
+  "aggression_level": 0.5,
+  "defense_bias": 0.65,
+  "reaction_speed": "fast",
+  "special_trait": "Kinetic Pattern Prediction: After a few exchanges, PatternSeeker X-01's internal processors can predict an opponent's likely next move with increasing accuracy, allowing it to pre-emptively counter or evade.",
+  "health": 0,
+  "max_health": 100,
+  "stamina": 85,
+  "max_stamina": 100,
+  "power": 50,
+  "technique": 50,
+  "level": 1,
+  "experience": 25,
+  "wins": 0,
+  "losses": 1,
+  "draws": 0,
+  "fighter_id": "2d25338e-8d46-41a6-bdde-4fe2f4bc721b",
+  "created_at": "2025-11-04T14:07:43.108389"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Unknown Fighter",
+  "personality": "Highly strategic",
+  "backstory": "Born from the vision: 'very smart and very fast. has the speed of light, strength of an elephant and blocks like an armour'",
+  "preferred_moves": [
+    "kick",
+    "grapple",
+    "throw",
+    "feint"
+  ],
+  "aggression_level": 0.5,
+  "defense_bias": 0.7,
+  "reaction_speed": "fast",
+  "special_trait": "Balanced warrior \u2014 adapts strategy to match the situation",
+  "health": 64,
+  "max_health": 130,
+  "stamina": 65,
+  "max_stamina": 115,
+  "power": 59,
+  "technique": 59,
+  "level": 4,
+  "experience": 115,
+  "wins": 6,
+  "losses": 1,
+  "draws": 0,
+  "fighter_id": "bc72e607-8faa-4bf1-8da8-fa2119bf6dc6",
+  "created_at": "2025-11-04T12:39:18.419240"
+}

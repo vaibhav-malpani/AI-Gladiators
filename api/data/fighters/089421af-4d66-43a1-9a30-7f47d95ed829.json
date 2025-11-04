@@ -1,0 +1,28 @@
+{
+  "name": "Battle Spirit",
+  "personality": "Balanced fighter, versatile combatant",
+  "backstory": "Born from the vision: 'a person who is very cool when the fight begins but gets better as the opponent gets better. \nvery cunning and takes the right opportunity when given'",
+  "preferred_moves": [
+    "kick",
+    "counter",
+    "pressure_point",
+    "dodge"
+  ],
+  "aggression_level": 0.5,
+  "defense_bias": 0.5,
+  "reaction_speed": "medium",
+  "special_trait": "Balanced warrior \u2014 adapts strategy to match the situation",
+  "health": 126,
+  "max_health": 150,
+  "stamina": 60,
+  "max_stamina": 125,
+  "power": 65,
+  "technique": 65,
+  "level": 6,
+  "experience": 575,
+  "wins": 16,
+  "losses": 1,
+  "draws": 0,
+  "fighter_id": "089421af-4d66-43a1-9a30-7f47d95ed829",
+  "created_at": "2025-11-04T12:38:26.831081"
+}

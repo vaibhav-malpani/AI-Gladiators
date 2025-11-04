@@ -1,0 +1,27 @@
+{
+  "name": "Master Flow",
+  "personality": "Cautious defender",
+  "backstory": "Born from the vision: 'A defensive master inspired by ancient kung fu, using the opponent's energy against them'",
+  "preferred_moves": [
+    "counter",
+    "block",
+    "dodge"
+  ],
+  "aggression_level": 0.30000000000000004,
+  "defense_bias": 0.7,
+  "reaction_speed": "medium",
+  "special_trait": "Balanced warrior \u2014 adapts strategy to match the situation",
+  "health": 0,
+  "max_health": 120,
+  "stamina": 105,
+  "max_stamina": 110,
+  "power": 56,
+  "technique": 56,
+  "level": 3,
+  "experience": 100,
+  "wins": 3,
+  "losses": 4,
+  "draws": 0,
+  "fighter_id": "6cf87166-fb0f-4c9f-bdb5-f28c05f47ed7",
+  "created_at": "2025-11-04T12:28:30.329402"
+}
