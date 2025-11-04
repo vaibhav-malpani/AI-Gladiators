@@ -4,10 +4,9 @@ Battle Engine - Handles combat simulation between AI fighters
 
 import random
 import time
-from typing import List, Dict, Tuple, Optional
+from typing import Dict
 from game.fighter import Fighter
 from game.ai_agent import AIAgent
-from utils.display import print_colored, print_battle_action
 
 
 class BattleEngine:
@@ -31,16 +30,16 @@ class BattleEngine:
         battle_context = {'round': 0, 'last_f1_move': None, 'last_f2_move': None}
 
         if show_animation:
-            print_colored(f"\n{'='*60}", "cyan")
-            print_colored(f"⚔️  BATTLE START: {fighter1.name} vs {fighter2.name} ⚔️", "yellow", bold=True)
-            print_colored(f"{'='*60}\n", "cyan")
+            print(f"\n{'='*60}", "cyan")
+            print(f"⚔️  BATTLE START: {fighter1.name} vs {fighter2.name} ⚔️", "yellow", bold=True)
+            print(f"{'='*60}\n", "cyan")
             time.sleep(1)
 
         for round_num in range(1, self.max_rounds + 1):
             battle_context['round'] = round_num
 
             if show_animation:
-                print_colored(f"\n--- Round {round_num} ---", "cyan", bold=True)
+                print(f"\n--- Round {round_num} ---", "cyan", bold=True)
                 self._display_fighter_status(fighter1, fighter2)
 
             # Both fighters decide their actions simultaneously
@@ -145,7 +144,7 @@ class BattleEngine:
                 if random.random() < hit_chance:
                     defender.take_damage(damage)
                     if show_animation:
-                        print_battle_action(
+                        print(
                             attacker.name, 
                             f"hits with {move.replace('_', ' ')}",
                             f"-{damage} HP",
@@ -154,7 +153,7 @@ class BattleEngine:
                     return {'hit': True, 'damage': damage}
                 else:
                     if show_animation:
-                        print_battle_action(
+                        print(
                             attacker.name,
                             f"attempts {move.replace('_', ' ')} but misses",
                             "MISS",
@@ -163,7 +162,7 @@ class BattleEngine:
                     return {'hit': False, 'damage': 0}
             else:
                 if show_animation:
-                    print_battle_action(
+                    print(
                         attacker.name,
                         "is too exhausted to attack",
                         "No stamina",
@@ -178,7 +177,7 @@ class BattleEngine:
                 heal_amount = random.randint(2, 5)
                 attacker.heal(heal_amount)
                 if show_animation:
-                    print_battle_action(
+                    print(
                         attacker.name,
                         f"takes defensive stance ({move.replace('_', ' ')})",
                         f"+{heal_amount} HP",
@@ -198,7 +197,7 @@ class BattleEngine:
                 if random.random() < hit_chance:
                     defender.take_damage(damage)
                     if show_animation:
-                        print_battle_action(
+                        print(
                             attacker.name,
                             f"executes special {move.replace('_', ' ')}!",
                             f"-{damage} HP ✨",
@@ -207,7 +206,7 @@ class BattleEngine:
                     return {'hit': True, 'damage': damage, 'special': True}
                 else:
                     if show_animation:
-                        print_battle_action(
+                        print(
                             attacker.name,
                             f"special {move.replace('_', ' ')} fails",
                             "MISS",
@@ -216,7 +215,7 @@ class BattleEngine:
                     return {'hit': False, 'damage': 0}
             else:
                 if show_animation:
-                    print_battle_action(
+                    print(
                         attacker.name,
                         "doesn't have enough stamina for special move",
                         "No stamina",
@@ -284,33 +283,33 @@ class BattleEngine:
     def _determine_winner(self, fighter1: Fighter, fighter2: Fighter, show_animation: bool) -> str:
         """Determine the winner of the battle"""
         if show_animation:
-            print_colored(f"\n{'='*60}", "cyan")
+            print(f"\n{'='*60}", "cyan")
 
         if fighter1.health <= 0 and fighter2.health <= 0:
             if show_animation:
-                print_colored("💥 DOUBLE KNOCKOUT! IT'S A DRAW! 💥", "yellow", bold=True)
+                print("💥 DOUBLE KNOCKOUT! IT'S A DRAW! 💥", "yellow", bold=True)
             return 'draw'
         elif fighter1.health <= 0:
             if show_animation:
-                print_colored(f"🏆 {fighter2.name} WINS! 🏆", "green", bold=True)
+                print(f"🏆 {fighter2.name} WINS! 🏆", "green", bold=True)
             return 'fighter2'
         elif fighter2.health <= 0:
             if show_animation:
-                print_colored(f"🏆 {fighter1.name} WINS! 🏆", "green", bold=True)
+                print(f"🏆 {fighter1.name} WINS! 🏆", "green", bold=True)
             return 'fighter1'
         else:
             # Max rounds reached, decide by health
             if fighter1.health > fighter2.health:
                 if show_animation:
-                    print_colored(f"🏆 {fighter1.name} WINS BY DECISION! 🏆", "green", bold=True)
+                    print(f"🏆 {fighter1.name} WINS BY DECISION! 🏆", "green", bold=True)
                 return 'fighter1'
             elif fighter2.health > fighter1.health:
                 if show_animation:
-                    print_colored(f"🏆 {fighter2.name} WINS BY DECISION! 🏆", "green", bold=True)
+                    print(f"🏆 {fighter2.name} WINS BY DECISION! 🏆", "green", bold=True)
                 return 'fighter2'
             else:
                 if show_animation:
-                    print_colored("⚔️  IT'S A DRAW! ⚔️", "yellow", bold=True)
+                    print("⚔️  IT'S A DRAW! ⚔️", "yellow", bold=True)
                 return 'draw'
 
     def _update_fighter_records(self, fighter1: Fighter, fighter2: Fighter, winner: str):
