@@ -77,7 +77,6 @@ Backend:
 - `ENVIRONMENT` (e.g., `development`)
 - `DEBUG` (`True`/`False`)
 - `SECRET_KEY` (set a strong value in production)
-- `DATABASE_URL` (optional; defaults to SQLite file path)
 - `API_HOST` (default `0.0.0.0`)
 - `API_PORT` (default `8000`)
 - `MAX_HEALTH`, `MAX_STAMINA`, `ROUNDS_PER_BATTLE` (game tuning)
